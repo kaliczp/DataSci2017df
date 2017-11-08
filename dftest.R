@@ -6,3 +6,4 @@ rm(Prec);rm(Temp)
 summary(c(1:100,100000)) # summary on vector
 summary(Meteo.df)
 summary(factor(Meteo.df[,1] > 0,labels =c("NoPrec","Prec")))
+Meteo.df$WasPrec <- factor(Meteo.df[,1] > 0,labels =c("NoPrec","Prec"))
