@@ -25,3 +25,8 @@ Meteo.df$Date <- seq(as.Date("1951-01-01"),as.Date("2014-12-31"),"days")
 ## Plot temperature against Date
 plot(Meteo.df$Date,Meteo.df$Temperature, type= "l")
 plot(Temperature ~ Date,data=Meteo.df, type="l")
+
+## Monthly temperature
+Meteo.df$Month <- format.Date(Meteo.df$Date, format="%m")
+boxplot(Temperature ~ Month, data = Meteo.df)
+## Construct the precipitation distribution
