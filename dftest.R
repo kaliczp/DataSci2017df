@@ -17,4 +17,7 @@ boxplot(Meteo.df$Temperature, ylim=c(-30,30), col="red")
 
 ## Boxplot of Precipitation
 boxplot(Meteo.df$Precipitation)
-boxplot(Meteo.df[,1])
+## plot only the days with precipitation
+boxplot(Meteo.df[Meteo.df$WasPrec=="Prec", 1])
+boxplot(Meteo.df[Meteo.df$Precipitation > 0, 1])
+
