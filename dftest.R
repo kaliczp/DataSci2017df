@@ -23,4 +23,5 @@ boxplot(Meteo.df[Meteo.df$Precipitation > 0, 1])
 
 Meteo.df$Date <- seq(as.Date("1951-01-01"),as.Date("2014-12-31"),"days")
 ## Plot temperature against Date
-plot(Meteo.df$Date,Meteo.df$Temperature)
+plot(Meteo.df$Date,Meteo.df$Temperature, type= "l")
+plot(Temperature ~ Date,data=Meteo.df, type="l")
