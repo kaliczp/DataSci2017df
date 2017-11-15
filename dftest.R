@@ -11,3 +11,6 @@ Meteo.df$WasPrec <- factor(Meteo.df[,1] > 0,labels =c("NoPrec","Prec"))
 boxplot(Meteo.df[,2])
 boxplot(Meteo.df[,"Temperature"])
 boxplot(Meteo.df$Temperature)
+
+## Modify boxplot
+boxplot(Meteo.df$Temperature, ylim=c(-30,30), col="red")
