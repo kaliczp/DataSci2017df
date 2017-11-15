@@ -14,3 +14,7 @@ boxplot(Meteo.df$Temperature)
 
 ## Modify boxplot
 boxplot(Meteo.df$Temperature, ylim=c(-30,30), col="red")
+
+## Boxplot of Precipitation
+boxplot(Meteo.df$Precipitation)
+boxplot(Meteo.df[,1])
