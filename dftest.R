@@ -41,4 +41,6 @@ Meteo.xts <- xts(Meteo.df[,1:2], Meteo.df$Date)
 plot(Precipitation ~ Date,data = Meteo.df, typ="l")
 abline(lm(Precipitation ~ Date,data = Meteo.df),col=2)
 
+## Regression object and summary
 Prec.lm <- lm(Precipitation ~ Date,data = Meteo.df)
+summary(Prec.lm)
