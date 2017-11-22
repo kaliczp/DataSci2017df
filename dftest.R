@@ -35,3 +35,10 @@ boxplot(Temperature ~ Month, data = Meteo.df)
 library(xts)
 head(xts(Meteo.df[,-(3:5)], Meteo.df$Date))
 Meteo.xts <- xts(Meteo.df[,1:2], Meteo.df$Date)
+
+
+## Trend line regression
+plot(Precipitation ~ Date,data = Meteo.df, typ="l")
+abline(lm(Precipitation ~ Date,data = Meteo.df),col=2)
+
+Prec.lm <- lm(Precipitation ~ Date,data = Meteo.df)
