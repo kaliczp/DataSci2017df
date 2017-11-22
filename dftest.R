@@ -30,3 +30,7 @@ plot(Temperature ~ Date,data=Meteo.df, type="l")
 Meteo.df$Month <- format.Date(Meteo.df$Date, format="%m")
 boxplot(Temperature ~ Month, data = Meteo.df)
 ## Construct the precipitation distribution
+
+## xts loading
+library(xts)
+precdate <- seq(as.Date("1951-01-01"),as.Date("2014-12-31"),by="days")
