@@ -33,4 +33,5 @@ boxplot(Temperature ~ Month, data = Meteo.df)
 
 ## xts loading
 library(xts)
-precdate <- seq(as.Date("1951-01-01"),as.Date("2014-12-31"),by="days")
+head(xts(Meteo.df[,-(3:5)], Meteo.df$Date))
+Meteo.xts <- xts(Meteo.df[,1:2], Meteo.df$Date)
